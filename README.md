@@ -6,7 +6,7 @@ Placar de jogos da Família Souza com visual de arena de videogame, fotos de Ari
 
 **Dominó:** Ariane 4, Jonatan 1, Nicolas 1.
 
-**Xadrez:** Jonatan 2, Nicolas 1.
+**Xadrez:** Jonatan 3, Nicolas 3.
 
 ## Instalar/publicar no GitHub Pages
 
