@@ -1,7 +1,7 @@
 {
   "version": 1,
   "family": "Família Souza",
-  "updatedAt": "2026-11-01T21:50:11.065Z",
+  "updatedAt": "2026-11-01T22:46:19.506Z",
   "players": [
     {
       "id": "ariane",
@@ -44,12 +44,33 @@
         "nicolas"
       ],
       "scores": {
-        "jonatan": 2,
-        "nicolas": 1
+        "jonatan": 3,
+        "nicolas": 3
       }
     }
   ],
   "history": [
+    {
+      "at": "2026-11-01T22:46:19.505Z",
+      "gameId": "xadrez",
+      "playerId": "jonatan",
+      "before": 2,
+      "after": 3
+    },
+    {
+      "at": "2026-11-01T22:46:19.504Z",
+      "gameId": "xadrez",
+      "playerId": "nicolas",
+      "before": 2,
+      "after": 3
+    },
+    {
+      "at": "2026-11-01T22:46:19.503Z",
+      "gameId": "xadrez",
+      "playerId": "nicolas",
+      "before": 1,
+      "after": 2
+    },
     {
       "at": "2026-11-01T21:50:11.065Z",
       "gameId": "domino",
