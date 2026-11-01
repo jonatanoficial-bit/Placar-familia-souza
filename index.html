@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07101e">
+  <meta name="description" content="Arena de jogos da Família Souza — acompanhe e atualize os placares de dominó, xadrez e muito mais.">
+  <title>Placar de Jogos | Família Souza</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-glow glow-one" aria-hidden="true"></div>
+  <div class="site-glow glow-two" aria-hidden="true"></div>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>S</span></div>
+        <div class="brand-caption"><strong>SOUZA</strong><span>FAMILY GAME ARENA</span></div>
+      </div>
+      <nav class="header-actions" aria-label="Ações">
+        <span id="syncTag" class="sync-tag"><span class="status-dot"></span> DADOS LOCAIS</span>
+        <button id="refreshBtn" class="icon-btn" type="button" title="Atualizar dados online" aria-label="Atualizar dados online"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 11a8 8 0 1 0-2.3 6.7M20 4v7h-7"/></svg></button>
+        <button id="settingsBtn" class="icon-btn" type="button" title="Configurações e sincronização" aria-label="Configurações e sincronização"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.8 1.8 0 0 0 .36 1.97l.07.08-1.78 1.78-.08-.07A1.8 1.8 0 0 0 16 18.4a1.8 1.8 0 0 0-1.5 1.77V21H9.5v-.83A1.8 1.8 0 0 0 8 18.4a1.8 1.8 0 0 0-1.97.36l-.08.07-1.78-1.78.07-.08A1.8 1.8 0 0 0 4.6 15a1.8 1.8 0 0 0-1.77-1.5H2v-3h.83A1.8 1.8 0 0 0 4.6 9a1.8 1.8 0 0 0-.36-1.97l-.07-.08 1.78-1.78.08.07A1.8 1.8 0 0 0 8 5.6a1.8 1.8 0 0 0 1.5-1.77V3h5v.83A1.8 1.8 0 0 0 16 5.6a1.8 1.8 0 0 0 1.97-.36l.08-.07 1.78 1.78-.07.08A1.8 1.8 0 0 0 19.4 9a1.8 1.8 0 0 0 1.77 1.5H22v3h-.83A1.8 1.8 0 0 0 19.4 15Z"/></svg></button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-label="Título do placar">
+        <div class="micro-title"><span class="micro-line"></span> TEMPORADA EM ANDAMENTO <span class="micro-line"></span></div>
+        <h1>PLACAR <em>DE JOGOS</em></h1>
+        <p class="intro-desc">FAMÍLIA <strong>SOUZA</strong> <span class="middle-dot">◆</span> CADA PARTIDA CONTA</p>
+        <div class="intro-actions">
+          <button id="editModeBtn" class="primary-button" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg><span>ATUALIZAR PLACAR</span></button>
+          <button id="publishBtn" class="secondary-button" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 16V3m0 0L7 8m5-5 5 5M4 16v4h16v-4"/></svg><span>SALVAR ONLINE</span></button>
+        </div>
+      </section>
+
+      <section class="players-section" aria-label="Jogadores da família">
+        <div class="section-meta"><span>01 / JOGADORES</span><span class="meta-right">SELEÇÃO FAMÍLIA SOUZA</span></div>
+        <div id="playerCards" class="player-grid"></div>
+      </section>
+
+      <section class="scoreboards-section" aria-label="Classificações por jogo">
+        <div class="section-heading">
+          <div><div class="section-kicker">DISPUTA EM TEMPO REAL</div><h2>QUEM ESTÁ NA <span>FRENTE?</span></h2></div>
+          <div class="board-toolbar"><span id="lastUpdated">PLACAR INICIAL</span><button class="text-button edit-only" id="newGameBtn" type="button">+ NOVO JOGO</button></div>
+        </div>
+        <div id="boards" class="boards-grid"></div>
+      </section>
+
+      <section class="bottom-section">
+        <div class="metrics" id="metrics"></div>
+        <div class="history-panel">
+          <div class="history-header"><div><div class="section-kicker">REGISTRO DE PARTIDAS</div><h2>ÚLTIMAS <span>ATUALIZAÇÕES</span></h2></div><button id="undoBtn" type="button" class="text-button edit-only">DESFAZER ÚLTIMA</button></div>
+          <div id="history" class="history-body"></div>
+        </div>
+      </section>
+    </main>
+    <footer><span>FAMÍLIA SOUZA <b>◈</b> GAME ARENA</span><span>FEITO PARA JOGAR JUNTOS • 2026</span></footer>
+  </div>
+
+  <dialog id="settingsDialog" class="modal-dialog">
+    <form method="dialog" class="modal-inner" id="settingsForm">
+      <div class="modal-heading"><div><span class="section-kicker">CENTRAL DE CONTROLE</span><h2>CONFIGURAÇÕES</h2></div><button type="button" class="close-btn" data-close="settingsDialog" aria-label="Fechar">×</button></div>
+      <p class="modal-hint">Os botões de pontos funcionam imediatamente neste aparelho. Para compartilhar as atualizações com outros aparelhos, conecte o repositório do GitHub.</p>
+      <label class="field-label" for="repositoryInput">REPOSITÓRIO (usuário/nome)</label>
+      <input id="repositoryInput" placeholder="jonatanoficial-bit/placar-familia-souza" autocomplete="off" spellcheck="false">
+      <label class="field-label" for="tokenInput">TOKEN GITHUB (não será salvo)</label>
+      <input type="password" id="tokenInput" autocomplete="off" placeholder="github_pat_...">
+      <p class="fine-print">Use um token <b>fine-grained</b> limitado somente a este repositório, com permissão <b>Contents: Read and write</b>. O token fica apenas na memória desta aba, não é gravado no site, no arquivo JSON nem no armazenamento local.</p>
+      <div class="modal-cta"><button id="onlineLoadBtn" type="button" class="secondary-button compact">CARREGAR DO GITHUB</button><button id="onlineSaveBtn" type="button" class="primary-button compact">PUBLICAR PLACAR</button></div>
+      <div class="divider-line"></div>
+      <h3>BACKUP E ARQUIVOS</h3>
+      <div class="modal-cta"><button id="exportBtn" type="button" class="secondary-button compact">EXPORTAR JSON</button><button id="importBtn" type="button" class="secondary-button compact">IMPORTAR JSON</button><input id="importFile" type="file" accept="application/json,.json" hidden></div>
+      <p class="fine-print"><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">Criar token no GitHub ↗</a> • <a href="https://github.com/new" target="_blank" rel="noopener noreferrer">Criar repositório ↗</a></p>
+    </form>
+  </dialog>
+
+  <dialog id="newGameDialog" class="modal-dialog">
+    <form id="newGameForm" class="modal-inner">
+      <div class="modal-heading"><div><span class="section-kicker">EXPANDIR A ARENA</span><h2>NOVO JOGO</h2></div><button type="button" class="close-btn" data-close="newGameDialog" aria-label="Fechar">×</button></div>
+      <label class="field-label" for="newGameName">NOME DO JOGO</label>
+      <input id="newGameName" maxlength="34" placeholder="Ex.: Uno, Truco, Damas" required>
+      <label class="field-label" for="newGameIcon">SÍMBOLO</label>
+      <select id="newGameIcon"><option value="cards">🃏 Cartas</option><option value="chess">♞ Xadrez</option><option value="domino">🎲 Dominó</option><option value="dice">🎲 Dados</option><option value="trophy">🏆 Troféu</option><option value="ball">⚽ Futebol</option><option value="puzzle">🧩 Quebra-cabeça</option></select>
+      <p class="field-label">QUEM PARTICIPA?</p><div id="newGamePlayers" class="player-checkboxes"></div>
+      <button class="primary-button modal-full-button" type="submit">CRIAR PLACAR</button>
+    </form>
+  </dialog>
+
+  <dialog id="newPlayerDialog" class="modal-dialog">
+    <form id="newPlayerForm" class="modal-inner">
+      <div class="modal-heading"><div><span class="section-kicker">NOVO COMPETIDOR</span><h2>ADICIONAR JOGADOR</h2></div><button type="button" class="close-btn" data-close="newPlayerDialog" aria-label="Fechar">×</button></div>
+      <label class="field-label" for="newPlayerName">NOME</label><input id="newPlayerName" maxlength="26" placeholder="Nome do jogador" required>
+      <label class="field-label" for="newPlayerPhoto">FOTO (OPCIONAL)</label><input id="newPlayerPhoto" type="file" accept="image/*">
+      <p class="fine-print">A foto será reduzida e incorporada aos dados do placar. Se publicar no GitHub, ela também será pública.</p>
+      <button class="primary-button modal-full-button" type="submit">ADICIONAR JOGADOR</button>
+    </form>
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

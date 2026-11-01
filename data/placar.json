@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "family": "Família Souza",
+  "updatedAt": "2026-11-01T21:00:00.000Z",
+  "players": [
+    {"id": "ariane", "name": "Ariane", "photo": "assets/ariane.webp"},
+    {"id": "jonatan", "name": "Jonatan", "photo": "assets/jonatan.webp"},
+    {"id": "nicolas", "name": "Nicolas", "photo": "assets/nicolas.webp"}
+  ],
+  "games": [
+    {"id": "domino", "name": "Dominó", "icon": "domino", "players": ["ariane", "jonatan", "nicolas"], "scores": {"ariane": 2, "jonatan": 1, "nicolas": 0}},
+    {"id": "xadrez", "name": "Xadrez", "icon": "chess", "players": ["jonatan", "nicolas"], "scores": {"jonatan": 2, "nicolas": 1}}
+  ],
+  "history": []
+}
