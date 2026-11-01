@@ -8,14 +8,14 @@ const STORAGE_KEY = 'familia_souza_placar_v1';
 const DEFAULT_REPO = 'jonatanoficial-bit/Placar-familia-souza';
 const REMOTE_PATH = 'data/placar.json';
 const DEFAULT_DATA = {
-  version: 1, family: 'Família Souza', updatedAt: '2026-11-01T21:00:00.000Z',
+  version: 1, family: 'Família Souza', updatedAt: '2026-11-01T21:50:11.065Z',
   players: [
     {id:'ariane', name:'Ariane', photo:'assets/ariane.webp'},
     {id:'jonatan', name:'Jonatan', photo:'assets/jonatan.webp'},
     {id:'nicolas', name:'Nicolas', photo:'assets/nicolas.webp'}
   ],
   games: [
-    {id:'domino', name:'Dominó', icon:'domino', players:['ariane','jonatan','nicolas'], scores:{ariane:2, jonatan:1, nicolas:0}},
+    {id:'domino', name:'Dominó', icon:'domino', players:['ariane','jonatan','nicolas'], scores:{ariane:4, jonatan:1, nicolas:1}},
     {id:'xadrez', name:'Xadrez', icon:'chess', players:['jonatan','nicolas'], scores:{jonatan:2,nicolas:1}}
   ],
   history: []
