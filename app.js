@@ -16,7 +16,7 @@ const DEFAULT_DATA = {
   ],
   games: [
     {id:'domino', name:'Dominó', icon:'domino', players:['ariane','jonatan','nicolas'], scores:{ariane:4, jonatan:1, nicolas:1}},
-    {id:'xadrez', name:'Xadrez', icon:'chess', players:['jonatan','nicolas'], scores:{jonatan:2,nicolas:1}}
+    {id:'xadrez', name:'Xadrez', icon:'chess', players:['jonatan','nicolas'], scores:{jonatan:3,nicolas:3}}
   ],
   history: []
 };
